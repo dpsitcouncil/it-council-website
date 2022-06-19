@@ -16,10 +16,49 @@ body {
 .video-container {
     /* width is set as 100% here. any width can be specified as per requirement */
     width: 100vw;
-    padding-top: 56.25%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.1);
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.jumbo-title{
+    font-size: 5em;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.jumbo-subtitle{
+    font-size: 2em;
+    color: #fb8500ff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.jumbo-app-btn{
+    width: 100%;
+    margin-top: 2rem;
+    height: 48px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    color:rgb(0, 227, 239);
+    border: 1px solid rgb(0, 227, 239);
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all ease-in-out 0.3s;
+}
+
+.jumbo-app-btn:hover{
+    background-color: rgb(0, 227, 239);
+    color: black;
 }
 
 .video {
