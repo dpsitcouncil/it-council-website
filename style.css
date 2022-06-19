@@ -22,6 +22,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 80px;
 }
 
@@ -912,3 +914,30 @@ textarea {
     background-color: #000000;
     z-index: 999999;
     }
+
+    @media screen and (max-width: 768px){
+        .jumbo-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    
+        .jumbo-title{
+            font-size: 3.5em;
+        }
+    
+        .jumbo-subtitle{
+            font-size: 1.5em;
+        }
+
+        .jumbo-app-link{
+            width: 100%;
+        }
+    }
+
+@media screen and (max-height: 450px){
+    .video-container{
+        height: auto;
+    }
+}
