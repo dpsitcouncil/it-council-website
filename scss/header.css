@@ -1,0 +1,153 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* Top/Bottom Left/Right */
+    padding: 2em 3em;
+    /* width: 100vw; */
+
+    background-color: #000000c9;
+    position: fixed;
+    width: 100vw;
+    z-index: 10000;
+    box-sizing: border-box;
+    height: 7em;
+}
+
+.navbar-brand {
+    height: 100%;
+}
+
+nav img {
+    height: 100%;
+}
+
+.links {
+    display: flex;
+}
+
+nav * {
+    color: white;
+}
+
+.links > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.links > a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+    .links {
+        visibility: hidden;
+        position: absolute;
+        flex-direction: column;
+        gap: 1.5em;
+        top: 0;
+
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        z-index: 100000;
+    }
+
+    .menu-button,
+    .close-button {
+        height: fit-content;
+        background: none;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .visible,
+    .invisible {
+        visibility: visible !important;
+    }
+
+    #ev_popup {
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .links *,
+    .links {
+        color: black;
+    }
+}
+
+@media (min-width: 720px) {
+    .links {
+        flex-direction: row;
+        gap: 1.5em;
+        display: relative;
+        align-items: center;
+        color: white;
+    }
+    .links * {
+        color: white;
+    }
+    .menu-button {
+        display: none;
+    }
+    .close-button {
+        display: none;
+    }
+    .material-symbols-outlined {
+        font-size: 1.3em !important;
+    }
+}
+
+.visible {
+    animation: menuAnimation forwards 300ms ease-in-out;
+    height: 100vh;
+    width: 80vw;
+}
+
+.invisible {
+    animation: closeMenuAnimation forwards 300ms ease-in-out;
+}
+
+@keyframes menuAnimation {
+    0% {
+        opacity: 0;
+        right: -100vw;
+        visibility: visible;
+        display: flex;
+        position: absolute;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+        background-color: white;
+        padding: 4em 2em;
+        height: 100vh;
+        width: 80vw;
+    }
+}
+
+@keyframes closeMenuAnimation {
+    0% {
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        padding: 4em 2em;
+        height: 100vh;
+        width: 80vw;
+    }
+
+    100% {
+        opacity: 0;
+        right: -100vw;
+        visibility: hidden;
+        display: none;
+    }
+}

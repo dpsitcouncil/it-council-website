@@ -19,47 +19,39 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	
 	
-	<script src="https://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
-
-
+  <!-- HEADER IMPORTS -->
+  <script src="/js/header.js"></script>
+  <link rel="stylesheet" href="/scss/header.css" />
+  <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+  />
 </head>
 
 <body>
 
   <!----Navigation Bar-->
-  <section id="nav-bar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-faded fixed-top bgcolor">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./"><img src="./img/Logo.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+  <nav class="navbar" id="nav-bar">
+    <a class="navbar-brand" href="/index.html"
+        ><img src="../img/Logo.png"
+    /></a>
+
+    <div class="links">
+        <button class="close-button" onclick="closeMenu()">
+            <span class="material-symbols-outlined"> close </span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-            <li class="nav-item act">
-              <a class="nav-link active" aria-current="page" href="./#about">About</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#TechSprint">Techsprint</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./#ITClub">IT Club</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Magazine/index/dist/index.html">Magazine</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./team">Our Team</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="./#Contact">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </section>
+
+        <a href="../index.html">Home</a>
+        <a href="../#about">About</a>
+        <a href="../#Contact">Contact Us</a>
+        <a href="/team">Team</a>
+    </div>
+
+    <button class="menu-button" onclick="openMenu()">
+        <span class="material-symbols-outlined"> menu </span>
+    </button>
+</nav>
+
   <div class="video-container" id="particles-js" onload="hidePreloader()">
     <div class="jumbo-content">
       <h1 class="jumbo-title">IT Council</h1>
